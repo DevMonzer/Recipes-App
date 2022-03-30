@@ -17,6 +17,18 @@ const sampleRecipes = [
     servings: 3,
     instructions:
       "Instructions: \n1.Put salt on Chicken \n2. Put Chicken in oven \n3. Eat Chicken",
+    ingredients: [
+      {
+        id: 1,
+        name: "Chicken",
+        amount: "2 Pounds",
+      },
+      {
+        id: 2,
+        name: "Salt",
+        amount: "1 Pounds",
+      },
+    ],
   },
   {
     id: 2,
@@ -25,5 +37,17 @@ const sampleRecipes = [
     servings: 1,
     instructions:
       "Instructions: \n1.Put salt on Fish \n2. Put Fish in oven \n3. Eat Fish",
+    ingredients: [
+      {
+        id: 1,
+        name: "Fish",
+        amount: "2 Pounds",
+      },
+      {
+        id: 2,
+        name: "Salt",
+        amount: ".5 Pounds",
+      },
+    ],
   },
 ];

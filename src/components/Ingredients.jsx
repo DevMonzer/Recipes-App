@@ -1,12 +1,12 @@
 import React from "react";
 
 export default function Ingredients({ ingredients }) {
-  console.log(ingredients);
+  const { name, amount } = ingredients;
 
   return (
     <div>
-      <span>{ingredients.name}</span>
-      <span>{ingredients.amount}</span>
+      <span>{name}</span>
+      <span>{amount}</span>
     </div>
   );
 }

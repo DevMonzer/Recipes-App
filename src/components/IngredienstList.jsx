@@ -1,7 +1,7 @@
 import React from "react";
 import Ingredients from "./Ingredients";
 
-export default function IngredienstList({ ingredients }) {
+export default function IngredienstList({ sampleRecipes, ingredients }) {
   return (
     <div>
       {ingredients.map((ingredient) => {

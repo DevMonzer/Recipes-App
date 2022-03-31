@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <>
-      <RecipeList recipes={recipes} />
+      <RecipeList recipes={recipes} handleRecipeAdd={handleRecipeAdd} />
     </>
   );
 }

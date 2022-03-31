@@ -3,8 +3,16 @@ import RecipeList from "./RecipeList";
 import "../css/app.css";
 import uuidv4 from "uuid/v4";
 
+// Creating a context to avoid props drillings
+export const RecipeContext = React.createContext();
+
 export default function App() {
   const [recipes, setRecipes] = useState(sampleRecipes);
+
+  const RecipeValues = {
+    handleRecipeAdd: handleRecipeAdd,
+    handleRecipeDelete: handleRecipeDelete,
+  };
 
   // If you wanna add a new recipe
   function handleRecipeAdd() {
@@ -27,11 +35,9 @@ export default function App() {
 
   return (
     <>
-      <RecipeList
-        recipes={recipes}
-        handleRecipeAdd={handleRecipeAdd}
-        handleRecipeDelete={handleRecipeDelete}
-      />
+      <RecipeContext.Provider value={RecipeValues}>
+        <RecipeList recipes={recipes} />
+      </RecipeContext.Provider>
     </>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function Ingredient({ name, amount }) {
+export default function Ingredient(ingredient) {
+  const { name, amount } = ingredient;
+
   return (
     <>
       <span>{name}</span>

@@ -1,11 +1,11 @@
 import React from "react";
 import Ingredients from "./Ingredients";
 
-export default function IngredienstList({ sampleRecipes, ingredients }) {
+export default function IngredienstList({ ingredients }) {
   return (
     <div>
       {ingredients.map((ingredient) => {
-        return <Ingredients key={ingredient.id} ingredients={ingredients} />;
+        return <Ingredients key={ingredient.id} ingredients={ingredient} />;
       })}
     </div>
   );

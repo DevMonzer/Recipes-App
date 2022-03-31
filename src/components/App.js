@@ -6,6 +6,7 @@ import uuidv4 from "uuid/v4";
 export default function App() {
   const [recipes, setRecipes] = useState(sampleRecipes);
 
+  // If you wanna add a new recipe
   function handleRecipeAdd() {
     const newRecipe = {
       id: uuidv4(),
@@ -19,6 +20,7 @@ export default function App() {
     setRecipes([...recipes, newRecipe]);
   }
 
+  // If you wanna delete a recipe
   function handleRecipeDelete(id) {
     setRecipes(recipes.filter((recipe) => recipe.id !== id));
   }

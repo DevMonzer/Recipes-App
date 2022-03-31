@@ -3,9 +3,9 @@ import Ingredients from "./Ingredients";
 
 export default function IngredienstList({ ingredients }) {
   return (
-    <div>
+    <div className="ingredient-grid">
       {ingredients.map((ingredient) => {
-        return <Ingredients key={ingredient.id} ingredients={ingredient} />;
+        return <Ingredients key={ingredient.id} {...ingredient} />;
       })}
     </div>
   );

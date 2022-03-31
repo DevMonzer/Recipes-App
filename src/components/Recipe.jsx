@@ -2,7 +2,7 @@ import React from "react";
 import IngredienstList from "./IngredienstList";
 
 export default function Recipe({ recipe, handleRecipeDelete }) {
-  const { name, cookTime, servings, instructions, ingredients } = recipe;
+  const { id, name, cookTime, servings, instructions, ingredients } = recipe;
 
   return (
     <div className="recipe">
@@ -12,7 +12,7 @@ export default function Recipe({ recipe, handleRecipeDelete }) {
           <button className="btn btn--primary mr-1">Edit</button>
           <button
             className="btn btn--danger"
-            onClick={() => handleRecipeDelete(recipe.id)}
+            onClick={() => handleRecipeDelete(id)}
           >
             Delete
           </button>

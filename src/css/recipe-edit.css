@@ -53,3 +53,8 @@ textarea.recipe-edit__input {
   margin-top: 20px;
   margin-left: 40px;
 }
+
+.recipe-edit__add-ingredient-btn-container {
+  margin-top: 20px;
+  text-align: center;
+}

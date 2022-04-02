@@ -29,7 +29,13 @@ export default function App() {
   const RecipeValues = {
     handleRecipeAdd: handleRecipeAdd,
     handleRecipeDelete: handleRecipeDelete,
+    handleRecipeSelect: handleRecipeSelect,
   };
+
+  // This is excuted when you select a recipe by pressing on the edit button
+  function handleRecipeSelect(id) {
+    setSelectedRecipeId(id);
+  }
 
   // If you wanna add a new recipe
   function handleRecipeAdd() {

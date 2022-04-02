@@ -9,12 +9,13 @@ const LOCAL_STORAGE_KEY = "cookingWithReact.recipes";
 
 export default function App() {
   const [recipes, setRecipes] = useState(sampleRecipes);
-
+  // Getting the data out the local storage
   useEffect(() => {
     const recipeJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (recipeJSON != null) setRecipes(JSON.parse(recipeJSON));
   }, []);
 
+  // Setting the data into the local storage
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(recipes));
   }, [recipes]);

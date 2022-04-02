@@ -15,6 +15,8 @@ export default function App() {
     (recipe) => recipe.id === selectedRecipeId
   );
 
+  console.log(selectedRecipe);
+
   // Getting the data out the local storage
   useEffect(() => {
     const recipeJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -60,7 +62,7 @@ export default function App() {
     <>
       <RecipeContext.Provider value={RecipeValues}>
         <RecipeList recipes={recipes} />
-        <RecipeEdit />
+        {selectedRecipe && <RecipeEdit recipe={selectedRecipe} />}
       </RecipeContext.Provider>
     </>
   );

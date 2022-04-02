@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import RecipeList from "./RecipeList";
 import "../css/app.css";
 import uuidv4 from "uuid/v4";
+import RecipeEdit from "./RecipeEdit";
 
 // Creating a context to avoid props drillings
 export const RecipeContext = React.createContext();
@@ -48,6 +49,7 @@ export default function App() {
     <>
       <RecipeContext.Provider value={RecipeValues}>
         <RecipeList recipes={recipes} />
+        <RecipeEdit />
       </RecipeContext.Provider>
     </>
   );

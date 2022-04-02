@@ -8,3 +8,7 @@
   max-height: 100%;
   overflow-y: auto;
 }
+
+.recipe-edit__remove-button-container {
+  text-align: end;
+}

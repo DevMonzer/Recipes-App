@@ -40,3 +40,8 @@
   outline: none;
   width: 100%;
 }
+
+textarea.recipe-edit__input {
+  resize: none;
+  height: 200px;
+}

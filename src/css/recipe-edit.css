@@ -12,3 +12,18 @@
 .recipe-edit__remove-button-container {
   text-align: end;
 }
+
+.recipe-edit__remove-button {
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.recipe-edit__details-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 10px;
+  column-gap: 40px;
+}

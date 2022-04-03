@@ -70,6 +70,10 @@ export default function App() {
 
   // If you wanna delete a recipe
   function handleRecipeDelete(id) {
+    // Here we are checking if a recipe has been deleted so we clear the selectedRecipeId value
+    if (selectedRecipeId != null && selectedRecipeId === id) {
+      setSelectedRecipeId(undefined);
+    }
     setRecipes(recipes.filter((recipe) => recipe.id !== id));
   }
 

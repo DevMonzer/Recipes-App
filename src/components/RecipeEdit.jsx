@@ -29,12 +29,6 @@ export default function RecipeEdit({ recipe }) {
     handleChange({ ingredients: [...recipe.ingredients, newIngredient] });
   }
 
-  function handleIngredientDelete(id) {
-    handleChange({
-      ingredients: recipe.ingredients.filter((i) => i.id !== id),
-    });
-  }
-
   return (
     <div className="recipe-edit">
       <div className="recipe-edit__remove-button-container">

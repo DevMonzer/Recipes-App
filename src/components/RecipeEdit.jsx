@@ -29,6 +29,13 @@ export default function RecipeEdit({ recipe }) {
     handleChange({ ingredients: [...recipe.ingredients, newIngredient] });
   }
 
+  // Removing an existing  ingredient
+  function handleIngredientDelete(id) {
+    handleChange({
+      ingredients: recipe.ingredients.filter((i) => i.id !== id),
+    });
+  }
+
   return (
     <div className="recipe-edit">
       <div className="recipe-edit__remove-button-container">
@@ -98,11 +105,17 @@ export default function RecipeEdit({ recipe }) {
             key={ingredient.id}
             handleIngredientChange={handleIngredientChange}
             ingredient={ingredient}
+            handleIngredientDelete={handleIngredientDelete}
           />
         ))}
       </div>
       <div className="recipe-edit__add-ingredient-btn-container">
-        <button className="btn btn--primary">Add Ingredient</button>
+        <button
+          onClick={() => handleIngredientAdd()}
+          className="btn btn--primary"
+        >
+          Add Ingredient
+        </button>
       </div>
     </div>
   );

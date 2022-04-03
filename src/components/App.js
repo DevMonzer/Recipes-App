@@ -11,11 +11,14 @@ const LOCAL_STORAGE_KEY = "cookingWithReact.recipes";
 export default function App() {
   const [selectedRecipeId, setSelectedRecipeId] = useState();
   const [recipes, setRecipes] = useState(sampleRecipes);
+
+  // This selectedRecipe will store the selected recipe based on a click event on the edit button
   const selectedRecipe = recipes.find(
     (recipe) => recipe.id === selectedRecipeId
   );
 
-  console.log(selectedRecipe);
+  // console.log(selectedRecipe);
+  // console.log(selectedRecipeId); // selectedRecipeId is undefined at first
 
   // Getting the data out the local storage
   useEffect(() => {
@@ -32,6 +35,7 @@ export default function App() {
     handleRecipeAdd: handleRecipeAdd,
     handleRecipeDelete: handleRecipeDelete,
     handleRecipeSelect: handleRecipeSelect,
+    handleRecipeChange: handleRecipeChange,
   };
 
   // This is excuted when you select a recipe by pressing on the edit button
@@ -51,6 +55,14 @@ export default function App() {
     };
 
     setRecipes([...recipes, newRecipe]);
+  }
+
+  // Handling changes on recipes
+  function handleRecipeChange(id, recipe) {
+    const newRecipes = [...recipes];
+    const index = newRecipes.findIndex((r) => r.id === id);
+    newRecipes[index] = recipe;
+    setRecipes(newRecipes);
   }
 
   // If you wanna delete a recipe
@@ -110,3 +122,10 @@ const sampleRecipes = [
     ],
   },
 ];
+
+/* 
+    - We select a recipe to edit using selectedRecipe function 
+
+    - After we a select a recipe to edit we pass it down to the RecipeEdit component so we can display it on the inputs field
+
+*/

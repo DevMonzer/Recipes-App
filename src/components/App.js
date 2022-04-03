@@ -54,6 +54,9 @@ export default function App() {
       ingredients: [{ id: uuidv4(), name: "Name", amount: "1 Tbs" }],
     };
 
+    // Once we create a new recipe we should display it on the second screen so we can justify its fields
+    setSelectedRecipeId(newRecipe.id);
+
     setRecipes([...recipes, newRecipe]);
   }
 

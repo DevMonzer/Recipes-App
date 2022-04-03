@@ -3,7 +3,7 @@ import RecipeIngredientEdit from "./RecipeIngredientEdit";
 import { RecipeContext } from "./App";
 
 export default function RecipeEdit({ recipe }) {
-  const { handleRecipeChange } = useContext(RecipeContext);
+  const { handleRecipeChange, handleRecipeSelect } = useContext(RecipeContext);
 
   // This is a helper function and it reacts to every change that happens in any input field
   function handleChange(changes) {
@@ -21,7 +21,12 @@ export default function RecipeEdit({ recipe }) {
   return (
     <div className="recipe-edit">
       <div className="recipe-edit__remove-button-container">
-        <button className="btn recipe-edit__remove-button">&times;</button>
+        <button
+          className="btn recipe-edit__remove-button"
+          onClick={() => handleRecipeSelect(undefined)}
+        >
+          &times;
+        </button>
       </div>
       <div className="recipe-edit__details-grid">
         <label htmlFor="name" className="recipe-edit__label">

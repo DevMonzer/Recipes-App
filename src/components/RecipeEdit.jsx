@@ -5,10 +5,12 @@ import { RecipeContext } from "./App";
 export default function RecipeEdit({ recipe }) {
   const { handleRecipeChange } = useContext(RecipeContext);
 
+  // This is a helper function and it reacts to every change that happens in any input field
   function handleChange(changes) {
     handleRecipeChange(recipe.id, { ...recipe, ...changes });
   }
 
+  // This is a helper function to handle changes to any input field in the RecipeIngredientEdit component
   function handleIngredientChange(id, ingredient) {
     const newIngredients = [...recipe.ingredients];
     const index = newIngredients.findIndex((i) => i.id === id);

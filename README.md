@@ -14,7 +14,7 @@ Recipes-App watch live -> https://recipes-app-sigma-pearl.vercel.app/
 * React js
 
 
-# This is a react app to list recipes.
-
-# It allows users to create, update, and delete recipes.
+# Description
+This is a react app to list recipes.
+It allows users to create, update, and delete recipes.
  

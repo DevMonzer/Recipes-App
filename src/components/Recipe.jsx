@@ -17,7 +17,7 @@ export default function Recipe({ recipe }) {
             className="btn btn--primary mr-1"
             onClick={() => handleRecipeSelect(id)}
           >
-            <span> Edit</span>
+            Edit
           </button>
           <button
             className="btn btn--danger"

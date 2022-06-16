@@ -35,6 +35,6 @@
 
 @media only screen and (max-width: 550px) {
   .btn {
-    padding: 0 5px;
+    padding: 2.5px 5px;
   }
 }

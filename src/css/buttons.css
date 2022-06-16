@@ -38,3 +38,9 @@
     padding: 2.5px 5px;
   }
 }
+
+@media only screen and (max-width: 460px) {
+  .btn {
+    padding: 2.5px 3px;
+  }
+}

@@ -43,8 +43,4 @@
   .btn {
     padding: 2.5px 3px;
   }
-
-  button > * {
-    font-size: 1px;
-  }
 }
